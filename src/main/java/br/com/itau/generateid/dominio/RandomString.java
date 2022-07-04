@@ -2,14 +2,11 @@ package br.com.itau.generateid.dominio;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.Random;
 
 public class RandomString {
     public static void main(String[] args) {
         String nomeUsuario = new String();
         String nomeArquivo = "C:\\Users\\EmilyOliveiraXavier\\IdeaProjects\\GenerateID\\Massa de Dados.txt";
-
-
 
         File arq = new File(nomeArquivo);
 
@@ -26,34 +23,15 @@ public class RandomString {
 
                     if(nomeUsuario == null) {break;}
 
-                    System.out.println("Usuario: " +nomeUsuario);
+                    System.out.println("Usuario: " +nomeUsuario.toUpperCase());
 
-                    if(loginUsuario[2].length() >= 3){
-                        System.out.println("Login: "+loginUsuario[0].substring(0,3).toUpperCase()+
-                                loginUsuario[1].substring(0,3).toUpperCase()+
-                                loginUsuario[2].substring(0,3).toUpperCase());
-                        if(loginUsuario[0].length() >= 7 || loginUsuario[1].length() >= 3 && loginUsuario[2] == null){
-                            System.out.println("Login: "+loginUsuario[0].substring(0,3).toUpperCase()+
-                                              loginUsuario[1].substring(0,3).toUpperCase());
-                        }
-                    }
-
-                    /*
                     if(loginUsuario[0].length() >= 7 || loginUsuario[1].length() >= 3){
-                        System.out.println("Login: "+loginUsuario[0].substring(0,3).toUpperCase()+
-                                         loginUsuario[1].substring(0,3).toUpperCase());
+                        System.out.println("Login: " + loginUsuario[0].substring(0,4).toUpperCase()+
+                                loginUsuario[1].substring(0,3).toUpperCase()+
+                                "\n===================================");
                     }
-                    */
-
-
                 }
-
-            } catch (Exception e){
-
-            }
+            } catch (Exception e){}
         }
-
-
     }
-
 }
