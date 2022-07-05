@@ -25,7 +25,7 @@ public class RandomString {
 
                     System.out.println("Usuario: " +nomeUsuario.toUpperCase());
 
-                    if (loginUsuario[0].length() >= 7 || loginUsuario[1].length() >= 3){
+                    if (loginUsuario[0].length() >= 4 || loginUsuario[1].length() >= 3){
                         System.out.println("Login: "
                                 + loginUsuario[0].substring(0,4).toUpperCase()
                                 + loginUsuario[1].substring(0,3).toUpperCase()
